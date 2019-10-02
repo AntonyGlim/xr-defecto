@@ -13,16 +13,17 @@
 --
 -- SET search_path TO as_terra_xr_defecto_v1;
 
-DROP TABLE IF EXISTS test;
-CREATE TABLE test
+DROP TABLE IF EXISTS x_ray_machines;
+CREATE TABLE x_ray_machines
 (
-    id         bigserial,
-    username   varchar(50) NOT NULL,
-    password   varchar(80) NOT NULL,
-    first_name VARCHAR(50) NOT NULL,
-    last_name  VARCHAR(50) NOT NULL,
-    email      VARCHAR(50) NOT NULL,
-    phone      VARCHAR(15) NOT NULL,
+    id                     INTEGER,
+    title                  varchar(50)      NOT NULL,
+    focal_heel             DOUBLE PRECISION NOT NULL,
+    min_voltage            DOUBLE PRECISION NOT NULL,
+    max_voltage            DOUBLE PRECISION NOT NULL,
+    min_current            DOUBLE PRECISION NOT NULL,
+    max_current            DOUBLE PRECISION NOT NULL,
+    source_window_distance DOUBLE PRECISION NOT NULL,
     PRIMARY KEY (id)
 );
 -- \d test;
