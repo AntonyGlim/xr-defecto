@@ -10,11 +10,6 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/metering")
-    public String metering(){
-        return "metering";
-    }
-
     @GetMapping("/print")
     public String print(){
         return "print";
