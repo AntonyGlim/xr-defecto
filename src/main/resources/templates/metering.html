@@ -15,9 +15,43 @@
 
             <div th:replace="~{topmenu :: navigation(metering)}"/>
 
-            <h1>xr-defecto</h1>
+            <br>
 
-            Добро пожаловать в xr-defecto! metering
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <th scope="row">Фокусное пяткно</th>
+                    <td th:text="${xRayMachine.getFocalHeel()}"/>
+                    <td> </td>
+                    <td rowspan="6"> </td>
+                </tr>
+                <tr>
+                    <th scope="row">Минимальное напряжение</th>
+                    <td th:text="${xRayMachine.getMinVoltage()}"/>
+                    <td>кВ</td>
+                </tr>
+                <tr>
+                    <th scope="row">Максимальное напряжение</th>
+                    <td th:text="${xRayMachine.getMaxVoltage()}"/>
+                    <td>кВ</td>
+                </tr>
+                <tr>
+                    <th scope="row">Минимальный ток</th>
+                    <td th:text="${xRayMachine.getMinCurrent()}"/>
+                    <td>мА</td>
+                </tr>
+                <tr>
+                    <th scope="row">Максимальный ток</th>
+                    <td th:text="${xRayMachine.getMaxCurrent()}"/>
+                    <td>мА</td>
+                </tr>
+                <tr>
+                    <th scope="row">Расстояние источник-окно</th>
+                    <td th:text="${xRayMachine.getSourceWindowDistance()}"/>
+                    <td>мм</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
