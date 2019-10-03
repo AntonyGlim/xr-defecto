@@ -16,14 +16,21 @@
 DROP TABLE IF EXISTS x_ray_machines;
 CREATE TABLE x_ray_machines
 (
-    id                     INTEGER,
-    title                  varchar(50)      NOT NULL,
-    focal_heel             DOUBLE PRECISION NOT NULL,
-    min_voltage            DOUBLE PRECISION NOT NULL,
-    max_voltage            DOUBLE PRECISION NOT NULL,
-    min_current            DOUBLE PRECISION NOT NULL,
-    max_current            DOUBLE PRECISION NOT NULL,
-    source_window_distance DOUBLE PRECISION NOT NULL,
-    PRIMARY KEY (id)
+  id                     serial,
+  title                  VARCHAR(50)      NOT NULL,
+  focal_heel             DOUBLE PRECISION NOT NULL,
+  min_voltage            DOUBLE PRECISION NOT NULL,
+  max_voltage            DOUBLE PRECISION NOT NULL,
+  min_current            DOUBLE PRECISION NOT NULL,
+  max_current            DOUBLE PRECISION NOT NULL,
+  source_window_distance DOUBLE PRECISION NOT NULL,
+  image                  VARCHAR(255),
+  PRIMARY KEY (id)
 );
 -- \d test;
+
+INSERT INTO x_ray_machines (title, focal_heel, min_voltage, max_voltage, min_current, max_current,
+                            source_window_distance, image)
+VALUES ('RIX 300 VC2', '2.5', '160', '300', '3', '3', '140', ''),
+       ('0.3 СБК 160 С РК', '0.8', '50', '160', '0', '3', '60', '');
+-- SELECT * FROM x_ray_machines;

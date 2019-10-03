@@ -40,7 +40,10 @@ public class XRayMachine implements Serializable {
     @Column(name = "source_window_distance")
     private Double sourceWindowDistance; //Расстояние источник-окно
 
-    public XRayMachine(String title, Double focalHeel, Double minVoltage, Double maxVoltage, Double minCurrent, Double maxCurrent, Double sourceWindowDistance) {
+    @Column(name = "image")
+    private String image;
+
+    public XRayMachine(String title, Double focalHeel, Double minVoltage, Double maxVoltage, Double minCurrent, Double maxCurrent, Double sourceWindowDistance, String image) {
         this.title = title;
         this.focalHeel = focalHeel;
         this.minVoltage = minVoltage;
@@ -48,6 +51,7 @@ public class XRayMachine implements Serializable {
         this.minCurrent = minCurrent;
         this.maxCurrent = maxCurrent;
         this.sourceWindowDistance = sourceWindowDistance;
+        this.image = image;
     }
 
     @Override
