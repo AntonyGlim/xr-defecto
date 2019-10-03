@@ -17,6 +17,20 @@
 
             <br>
 
+            <div class="input-group">
+                <select class="custom-select">
+                    <option selected>...</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+                <span>Рентгеновский аппарат</span>
+                <select class="custom-select" id="inputGroupSelect04" th:each="xrm :  ${xRayMachines}">
+                    <option th:text="${xrm.getTitle()}"/>
+                </select>
+            </div>
+
+            <br>
+
             <table class="table table-bordered">
                 <tbody>
                 <tr>
