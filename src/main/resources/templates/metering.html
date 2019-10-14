@@ -76,13 +76,10 @@
 
             <div class="input-group">
                 <span>Материал</span>
-                <select class="custom-select">
-                    <option selected>...</option>
-                    <option value="Al">Al</option>
-                    <option value="Ti">Ti</option>
-                    <option value="Fe">Fe</option>
-                    <option value="Cu">Cu</option>
-                </select>
+	            <select class="custom-select" id="inputGroupSelect04">
+		            <option selected>...</option>
+		            <option th:each="m :  ${materials}" th:value="${m.getTitle()}" th:text="${m.getTitle()}"></option>
+	            </select>
             </div>
 
             <br>
