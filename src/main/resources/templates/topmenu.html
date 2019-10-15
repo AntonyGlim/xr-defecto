@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org">
-<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -52,6 +51,13 @@
                     </form>
                 </li>
             </ul>
+            <div class="dropdown" style="margin-left: 10px;">
+                <button class="btn btn-outline-secondary dropdown-toggle" th:text="#{topmenu.lang}" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" th:href="@{/?lang=ru}">РУС</a>
+                    <a class="dropdown-item" th:href="@{/?lang=en}">ENG</a>
+                </div>
+            </div>
         </div>
     </nav>
 
