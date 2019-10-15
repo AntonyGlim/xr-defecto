@@ -25,9 +25,8 @@
                 </div>
             </div>
 
-            <footer class="text-center">
-                <p> Copyright &copy; xr-defecto.ru, <span th:text="${#dates.format(#dates.createNow(), 'yyyy')}"/> | Все права защищены </p>
-            </footer>
+            <div th:replace="~{footer::footer}"/>
+
         </div>
     </body>
 </html>
